@@ -5,12 +5,32 @@ window.onload = function () {
     var cube = document.getElementsByClassName('cube');
     var mycolor;
 
+
+
     //随机格子颜色
     function random_color() {
-        //随机格子
-        var arr_3 = [];
+        var test = [0,1,2,3,4,5,6,7,8];
+
+        //洗牌算法取随机格子
+        Array.prototype.shuffle = function() {
+            var input = this;
+
+            for (var i = input.length-1; i >=0; i--) {
+
+                var randomIndex = Math.floor(Math.random()*(i+1));
+                var itemAtIndex = input[randomIndex];
+
+                input[randomIndex] = input[i];
+                input[i] = itemAtIndex;
+            }
+            return input;
+        };
+        test.shuffle();
+
+        //条件判断取随机格子
+        /*var arr_3 = [];
         function numRandom() {
-            var random = Math.abs((Math.floor(Math.random()*10))-1);
+            var random = Math.floor(Math.random()*9);
             if(arr_3.length < 3) {
                 for(i=0;i<=arr_3.length;i++) {
                     if( random == arr_3[i] ) {
@@ -23,10 +43,11 @@ window.onload = function () {
                         }
                     }
                 }
-                numRandom(0,9);
+                numRandom();
             }
         }
-        numRandom(0,9);
+        numRandom();*/
+
         //随机颜色
         var arr_r = [Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256)];
         var arr_g = [Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256)];
@@ -37,9 +58,14 @@ window.onload = function () {
             cube[j].style.backgroundColor = '#fea500';
         }
         //变化格子颜色
-        for (i=0; i<arr_3.length; i++) {
-            cube[arr_3[i]].style.backgroundColor = "rgb("+arr_rgb[i][0]+","+arr_rgb[i][1]+","+arr_rgb[i][2]+")";
+        //洗牌法
+        for (i=0; i<3; i++){
+            cube[test[i]].style.backgroundColor = "rgb("+arr_rgb[i][0]+","+arr_rgb[i][1]+","+arr_rgb[i][2]+")";
         }
+        //条件判断法
+        /* for (i=0; i<arr_3.length; i++) {
+             cube[arr_3[i]].style.backgroundColor = "rgb("+arr_rgb[i][0]+","+arr_rgb[i][1]+","+arr_rgb[i][2]+")";
+        }*/
     }
 
     //开始闪
