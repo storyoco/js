@@ -19,6 +19,7 @@ window.onload = function () {
         clearColor();
 
         //洗牌算法取随机格子
+        var shurrle = cubeShuffle();
         function cubeShuffle() {
             //取格子数组
             var test = new Array(cube.length);
@@ -37,7 +38,7 @@ window.onload = function () {
                 return input;
             };
             test.shuffle();
-            return test.shuffle();
+            return test;
         }
 
         //随机颜色
@@ -50,7 +51,7 @@ window.onload = function () {
 
         //变化格子颜色
         for (n=0; n<3; n++){
-            cube[cubeShuffle()[n]].style.backgroundColor = rgb();
+            cube[shurrle[n]].style.backgroundColor = rgb();
         }
     }
 
