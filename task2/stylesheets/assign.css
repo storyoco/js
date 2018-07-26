@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/* line 5, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../sass/assign.scss */
+html {
+  font-size: 625%;
+}
+
+/* line 7, ../sass/assign.scss */
+body {
+  font-size: 16px;
+  font-size: .16rem;
+  background-color: #f0f0f0;
+}
+
+/* line 41, ../sass/assign.scss */
+.head {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #29bde0;
+}
+/* line 46, ../sass/assign.scss */
+.head .header {
+  display: flex;
+  align-items: center;
+  margin-left: 6%;
+  margin-right: 6%;
+  justify-content: space-between;
+  height: .75rem;
+}
+/* line 51, ../sass/assign.scss */
+.head .header .btn-back {
+  height: .4rem;
+  width: .51rem;
+  background: url("../img/icon.png") no-repeat -1.5rem -0.5rem;
+}
+
+/* line 59, ../sass/assign.scss */
+.content {
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-top: .75rem;
+  padding-bottom: 1.3rem;
+}
+/* line 65, ../sass/assign.scss */
+.content .assign-title {
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .32rem;
+  background-color: white;
+  border-radius: .05rem;
+  border-bottom: #d9d9d9 solid .04rem;
+  border-right: #d9d9d9 solid .03rem;
+  text-align: center;
+  margin-top: .25rem;
+  margin-bottom: .2rem;
+}
+/* line 81, ../sass/assign.scss */
+.content .assign-list {
+  height: 3.8rem;
+  font-size: .25rem;
+  background-color: #fbfbfb;
+}
+/* line 85, ../sass/assign.scss */
+.content .assign-list .kill_man_num {
+  display: flex;
+  justify-content: space-around;
+}
+/* line 88, ../sass/assign.scss */
+.content .assign-list .kill_man_num .man, .content .assign-list .kill_man_num .killer {
+  display: flex;
+  align-items: center;
+  height: .7rem;
+}
+/* line 91, ../sass/assign.scss */
+.content .assign-list .kill_man_num .man img, .content .assign-list .kill_man_num .killer img {
+  margin-right: .1rem;
+  height: .5rem;
+  width: .5rem;
+}
+/* line 101, ../sass/assign.scss */
+.content .assign-list .kill_man_list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 3rem;
+  overflow: auto;
+}
+/* line 107, ../sass/assign.scss */
+.content .assign-list .kill_man_list li {
+  text-align: center;
+  width: 50%;
+  height: .5rem;
+}
+/* line 111, ../sass/assign.scss */
+.content .assign-list .kill_man_list li div {
+  display: inline-block;
+  height: .2rem;
+  width: .2rem;
+  background-color: #29bde0;
+}
+/* line 120, ../sass/assign.scss */
+.content .assign-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .1rem;
+  padding-bottom: 1rem;
+  background-color: white;
+}
+/* line 126, ../sass/assign.scss */
+.content .assign-box .btn-num {
+  outline: none;
+  padding-top: .2rem;
+  font-size: .25rem;
+  color: #29bde0;
+  background-color: white;
+}
+/* line 134, ../sass/assign.scss */
+.content .assign-num {
+  margin-top: .1rem;
+  padding-bottom: .8rem;
+  background-color: white;
+  padding-top: .2rem;
+}
+/* line 139, ../sass/assign.scss */
+.content .assign-num .num-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 142, ../sass/assign.scss */
+.content .assign-num .num-input .num-info {
+  font-size: .25rem;
+  font-weight: bold;
+}
+/* line 146, ../sass/assign.scss */
+.content .assign-num .num-input .num {
+  width: .45rem;
+  margin-left: 4%;
+  margin-right: 4%;
+  text-align: center;
+  font-size: .3rem;
+  font-weight: bold;
+  color: #fbb435;
+  background-color: #f0f0f0;
+}
+/* line 155, ../sass/assign.scss */
+.content .assign-num .num-input .num-player {
+  font-size: .22rem;
+  color: #fbb435;
+}
+/* line 160, ../sass/assign.scss */
+.content .assign-num .num-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .4rem;
+}
+/* line 164, ../sass/assign.scss */
+.content .assign-num .num-bar .btn-reduce, .content .assign-num .num-bar .btn-add {
+  height: .3rem;
+  width: .3rem;
+  margin-left: .1rem;
+  margin-right: .1rem;
+  background: url("../img/icon-reduce.jpg") no-repeat center center;
+  border: #f0f0f0 solid .01rem;
+}
+/* line 174, ../sass/assign.scss */
+.content .assign-num .num-bar .btn-add {
+  margin-left: .1rem;
+  margin-right: .1rem;
+  background: url("../img/icon-add.png") no-repeat center center;
+}
+/* line 183, ../sass/assign.scss */
+.content .assign-num .num-bar #range {
+  /*设置滑块下面那条线的样式*/
+  outline: none;
+  /*去掉点击时出现的外边框*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /*这三个是去掉那条线原有的默认样式，划重点！！*/
+  width: 40%;
+  height: 0.04rem;
+  background: orange;
+  /*这三个是设置滑块下面那条线的样式*/
+}
+/* line 193, ../sass/assign.scss */
+.content .assign-num .num-bar input[type=range]::-webkit-slider-thumb {
+  /*::-webkit-slider-thumb是代表给滑块的样式进行变更*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /*//这三个是去掉滑块原有的默认样式，划重点！！*/
+  -webkit-box-shadow: 0 0 2px;
+  /*设置滑块的阴影*/
+  width: .6rem;
+  height: .36rem;
+  background: url("../img/range.png");
+  background-size: cover;
+}
+
+/* line 208, ../sass/assign.scss */
+.foot {
+  position: fixed;
+  bottom: 0;
+  height: 1.3rem;
+  width: 88%;
+  margin-left: 6%;
+}
+/* line 214, ../sass/assign.scss */
+.foot input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.24rem;
+  height: 0.86rem;
+  line-height: 0.86rem;
+  background-color: #fbb435;
+  color: #ffffff;
+  font-size: 0.36rem;
+  text-indent: calc(50% - .6rem);
+}

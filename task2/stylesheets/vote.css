@@ -1,0 +1,241 @@
+/* line 5, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 26, ../sass/vote.scss */
+html {
+  font-size: 625%;
+}
+
+/* line 29, ../sass/vote.scss */
+body {
+  font-size: 16px;
+  font-size: .16rem;
+  background-color: #29bde0;
+}
+
+/* line 34, ../sass/vote.scss */
+.head {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #29bde0;
+}
+/* line 40, ../sass/vote.scss */
+.head .header {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: space-between;
+  height: .75rem;
+}
+/* line 45, ../sass/vote.scss */
+.head .header .btn-close {
+  height: .4rem;
+  width: .4rem;
+  background: url("../img/icon.png") no-repeat -1.5rem -1.6rem;
+}
+/* line 50, ../sass/vote.scss */
+.head .header .vote {
+  margin-left: calc(50% - .32rem);
+  font-size: .32rem;
+  color: #ffffff;
+}
+
+/* line 58, ../sass/vote.scss */
+.content {
+  padding-top: .75rem;
+  padding-bottom: 1.95rem;
+}
+/* line 61, ../sass/vote.scss */
+.content .vote-info {
+  display: flex;
+  align-items: center;
+  height: .82rem;
+  font-size: .26rem;
+  background-color: #b9e9f5;
+  margin-bottom: .2rem;
+}
+/* line 67, ../sass/vote.scss */
+.content .vote-info .vote-text {
+  margin-left: 4%;
+}
+/* line 70, ../sass/vote.scss */
+.content .vote-info .vote-tgl {
+  position: relative;
+  right: 3.2rem;
+  z-index: -1;
+  margin-top: .2rem;
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 1rem solid #b9e9f5;
+}
+/* line 84, ../sass/vote.scss */
+.content .vote-prom {
+  padding-top: .15rem;
+  padding-bottom: .1rem;
+  padding-left: 4%;
+  font-size: .23rem;
+  color: #ffffff;
+}
+/* line 94, ../sass/vote.scss */
+.content .vote-peo {
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 2vw;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* line 100, ../sass/vote.scss */
+.content .vote-peo .peo-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 35.81vw;
+  width: 25vw;
+  margin-left: 1.7vw;
+  margin-right: 1.7vw;
+}
+/* line 109, ../sass/vote.scss */
+.content .vote-peo .peo-col .peo-box {
+  height: 21.25vw;
+  width: 21.25vw;
+  display: inline-block;
+  padding: 0;
+  border: 0.78vw solid #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 117, ../sass/vote.scss */
+.content .vote-peo .peo-col .peo-box .peo-pic {
+  font-size: 5vw;
+  color: #000;
+  height: 17.5vw;
+  line-height: 17.5vw;
+  background-color: #f5c97b;
+  text-align: center;
+}
+/* line 125, ../sass/vote.scss */
+.content .vote-peo .peo-col .peo-box .peo-num {
+  font-size: 3vw;
+  color: #ffffff;
+  height: 3.7vw;
+  background-color: #83b09a;
+  text-align: center;
+}
+/* line 133, ../sass/vote.scss */
+.content .vote-peo .peo-col .peo-act {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.8vw;
+}
+/* line 137, ../sass/vote.scss */
+.content .vote-peo .peo-col .peo-act li {
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-size: 39vw 125vw;
+  height: 4.68vw;
+  width: 4.68vw;
+}
+/* line 147, ../sass/vote.scss */
+.content .vote-peo .peo-col .peo-act .peo-knife {
+  background-position: -7.81vw -72.65vw;
+}
+
+/* line 155, ../sass/vote.scss */
+.foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #29bde0;
+  border-top: #e7e7e7 solid .01rem;
+}
+/* line 161, ../sass/vote.scss */
+.foot .footer {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: center;
+  height: 1.95rem;
+}
+/* line 166, ../sass/vote.scss */
+.foot .footer-btn {
+  margin: 0 16%;
+  height: .88rem;
+  width: 100%;
+  line-height: .88rem;
+  background-color: #fbb435;
+  text-align: center;
+  font-size: .36rem;
+  color: #ffffff;
+}

@@ -1,0 +1,182 @@
+/* line 5, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 26, ../sass/identity.scss */
+html {
+  font-size: 625%;
+}
+
+/* line 29, ../sass/identity.scss */
+body {
+  font-size: 16px;
+  font-size: .16rem;
+  background-color: #29bde0;
+}
+
+/* line 34, ../sass/identity.scss */
+.head {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #29bde0;
+  border-bottom: #b9e9f5 solid .01rem;
+}
+/* line 41, ../sass/identity.scss */
+.head .header {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: space-between;
+  height: .75rem;
+}
+/* line 46, ../sass/identity.scss */
+.head .header .btn-back {
+  height: .4rem;
+  width: .4rem;
+  background: url("../img/icon.png") no-repeat -1.5rem -0.5rem;
+}
+/* line 51, ../sass/identity.scss */
+.head .header .btn-close {
+  height: .4rem;
+  width: .4rem;
+  background: url("../img/icon.png") no-repeat -1.5rem -1.6rem;
+}
+/* line 56, ../sass/identity.scss */
+.head .header .vote {
+  font-size: .32rem;
+  color: #ffffff;
+}
+
+/* line 63, ../sass/identity.scss */
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: .75rem;
+  padding-bottom: 1.95rem;
+}
+/* line 68, ../sass/identity.scss */
+.content .num-pic {
+  margin-top: .65rem;
+  height: .74rem;
+  width: .74rem;
+  border-radius: 50%;
+  border: #ffedc5 solid .05rem;
+  background-color: white;
+  font-size: .36rem;
+  font-weight: bold;
+  color: #f56b81;
+  line-height: .74rem;
+  text-align: center;
+}
+/* line 81, ../sass/identity.scss */
+.content .flop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+  bottom: .4rem;
+  height: 6.6rem;
+  width: 70%;
+  border: white solid .05rem;
+  background: url("../img/flop.png") no-repeat center #ffedc5;
+}
+/* line 91, ../sass/identity.scss */
+.content .flop .text {
+  font-size: .46rem;
+  color: #29bde0;
+}
+
+/* line 98, ../sass/identity.scss */
+.foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #29bde0;
+}
+/* line 103, ../sass/identity.scss */
+.foot .footer {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: center;
+  height: 1.95rem;
+}
+/* line 108, ../sass/identity.scss */
+.foot .footer-btn {
+  cursor: pointer;
+  margin: 0 10%;
+  height: .88rem;
+  width: 100%;
+  line-height: .88rem;
+  background-color: #fbb435;
+  text-align: center;
+  font-size: .36rem;
+  color: #ffffff;
+}

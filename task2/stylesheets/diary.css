@@ -1,0 +1,224 @@
+/* line 5, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 26, ../sass/diary.scss */
+html {
+  font-size: 625%;
+}
+
+/* line 29, ../sass/diary.scss */
+body {
+  font-size: 16px;
+  font-size: .16rem;
+  background-color: #29bde0;
+}
+
+/* line 34, ../sass/diary.scss */
+.head {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #29bde0;
+  border-bottom: #b9e9f5 solid .01rem;
+}
+/* line 41, ../sass/diary.scss */
+.head .header {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: space-between;
+  height: .75rem;
+}
+/* line 46, ../sass/diary.scss */
+.head .header .btn-back {
+  height: .4rem;
+  width: .4rem;
+  background: url("../img/icon.png") no-repeat -1.5rem -0.5rem;
+}
+/* line 51, ../sass/diary.scss */
+.head .header .btn-close {
+  height: .4rem;
+  width: .4rem;
+  background: url("../img/icon.png") no-repeat -1.5rem -1.6rem;
+}
+/* line 56, ../sass/diary.scss */
+.head .header .vote {
+  font-size: .32rem;
+  color: #ffffff;
+}
+
+/* line 63, ../sass/diary.scss */
+.content {
+  padding-top: 1rem;
+  padding-bottom: 1.95rem;
+}
+/* line 66, ../sass/diary.scss */
+.content .vote-peo {
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 2vw;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* line 72, ../sass/diary.scss */
+.content .vote-peo .peo-col {
+  display: flex;
+  justify-content: center;
+  height: 35.81vw;
+  width: 25vw;
+  margin-left: 1.7vw;
+  margin-right: 1.7vw;
+}
+/* line 81, ../sass/diary.scss */
+.content .vote-peo .peo-col .peo-box {
+  height: 21.25vw;
+  width: 21.25vw;
+  display: inline-block;
+  padding: 0;
+  border: 0.78vw solid #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+}
+/* line 89, ../sass/diary.scss */
+.content .vote-peo .peo-col .peo-box .peo-pic {
+  font-size: 5vw;
+  color: #000;
+  height: 17.5vw;
+  line-height: 17.5vw;
+  background-color: #f5c97b;
+  text-align: center;
+}
+/* line 97, ../sass/diary.scss */
+.content .vote-peo .peo-col .peo-box .peo-num {
+  font-size: 3vw;
+  color: #ffffff;
+  height: 3.7vw;
+  background-color: #83b09a;
+  text-align: center;
+}
+/* line 106, ../sass/diary.scss */
+.content .vote-peo .peo-act {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.8vw;
+}
+/* line 110, ../sass/diary.scss */
+.content .vote-peo .peo-act li {
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-size: 39vw 125vw;
+  height: 4.68vw;
+  width: 4.68vw;
+}
+/* line 120, ../sass/diary.scss */
+.content .vote-peo .peo-act .peo-knife {
+  background-position: -7.81vw -72.65vw;
+}
+/* line 123, ../sass/diary.scss */
+.content .vote-peo .peo-act .peo-glass {
+  background-position: -7.81vw -82.5vw;
+}
+/* line 126, ../sass/diary.scss */
+.content .vote-peo .peo-act .peo-aim {
+  background-position: -23.43vw -72.65vw;
+}
+/* line 129, ../sass/diary.scss */
+.content .vote-peo .peo-act .peo-medicine {
+  background-position: -23.43vw -82.5vw;
+}
+
+/* line 136, ../sass/diary.scss */
+.foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #29bde0;
+}
+/* line 141, ../sass/diary.scss */
+.foot .footer {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: center;
+  height: 1.95rem;
+}
+/* line 146, ../sass/diary.scss */
+.foot .footer-btn {
+  margin: 0 10%;
+  height: .88rem;
+  width: 100%;
+  line-height: .88rem;
+  background-color: #fbb435;
+  text-align: center;
+  font-size: .36rem;
+  color: #ffffff;
+}

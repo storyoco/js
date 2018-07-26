@@ -1,0 +1,248 @@
+/* line 5, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 26, ../sass/process.scss */
+html {
+  font-size: 625%;
+}
+
+/* line 29, ../sass/process.scss */
+body {
+  font-size: 16px;
+  font-size: .16rem;
+  background-color: #f0f0f0;
+}
+
+/* line 34, ../sass/process.scss */
+.head {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #29bde0;
+  border-bottom: #b9e9f5 solid .01rem;
+}
+/* line 41, ../sass/process.scss */
+.head .header {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: space-between;
+  height: .75rem;
+}
+/* line 46, ../sass/process.scss */
+.head .header .btn-back {
+  height: .4rem;
+  width: .4rem;
+  background: url("../img/icon.png") no-repeat -1.5rem -0.5rem;
+}
+/* line 51, ../sass/process.scss */
+.head .header .btn-close {
+  height: .4rem;
+  width: .4rem;
+  background: url("../img/icon.png") no-repeat -1.5rem -1.6rem;
+}
+/* line 56, ../sass/process.scss */
+.head .header .proc_text {
+  font-size: .32rem;
+  color: #ffffff;
+}
+
+/* line 63, ../sass/process.scss */
+.content {
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+/* line 69, ../sass/process.scss */
+.content .day-box {
+  margin-bottom: .2rem;
+}
+/* line 71, ../sass/process.scss */
+.content .day-box .date, .content .day-box .date_now {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  background-color: #f7f7f7;
+  border: #c9c9c9 solid .01rem;
+  border-bottom: 0;
+}
+/* line 79, ../sass/process.scss */
+.content .day-box .date .time, .content .day-box .date_now .time {
+  position: relative;
+  left: calc(50% - .35rem);
+  font-size: .3rem;
+  font-weight: bold;
+  color: #29bde0;
+}
+/* line 86, ../sass/process.scss */
+.content .day-box .date .down, .content .day-box .date_now .down {
+  float: right;
+  position: relative;
+  right: .2rem;
+}
+/* line 92, ../sass/process.scss */
+.content .day-box .proc-box {
+  display: flex;
+  border: #c9c9c9 solid .01rem;
+  border-top: 0;
+  background-color: #f7f7f7;
+}
+/* line 97, ../sass/process.scss */
+.content .day-box .proc-box .left {
+  position: relative;
+  width: 12%;
+}
+/* line 100, ../sass/process.scss */
+.content .day-box .proc-box .left .border {
+  background-color: #c9c9c9;
+  width: .02rem;
+  height: 92%;
+  margin: 0 auto;
+}
+/* line 106, ../sass/process.scss */
+.content .day-box .proc-box .left .circle, .content .day-box .proc-box .left .circle2 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - .3rem);
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+  border: #c9c9c9 solid .01rem;
+  background: url("../img/moon.png") no-repeat center #f7f7f7;
+}
+/* line 116, ../sass/process.scss */
+.content .day-box .proc-box .left .circle2 {
+  top: 1rem;
+  background: url("../img/sun.png") no-repeat center #f7f7f7;
+}
+/* line 122, ../sass/process.scss */
+.content .day-box .proc-box .proc {
+  width: 73%;
+  margin-bottom: .1rem;
+  margin-left: .2rem;
+}
+/* line 128, ../sass/process.scss */
+.content .day-box .proc-box .proc .process {
+  position: relative;
+  height: .74rem;
+  line-height: .74rem;
+  text-align: center;
+  margin-bottom: .2rem;
+  color: white;
+  font-size: .28rem;
+  background-color: #29bde0;
+}
+/* line 139, ../sass/process.scss */
+.content .day-box .proc-box .proc .process .trg {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: .2rem;
+  left: -.32rem;
+  border: transparent solid .16rem;
+  border-right: #29bde0 solid 0.22rem;
+}
+/* line 149, ../sass/process.scss */
+.content .day-box .proc-box .proc .killText, .content .day-box .proc-box .proc .voteText {
+  font-size: .25rem;
+  margin-top: .37rem;
+  margin-bottom: .37rem;
+}
+
+/* line 164, ../sass/process.scss */
+.foot {
+  position: fixed;
+  bottom: 0;
+  height: 1.3rem;
+  width: 100%;
+  background-color: rgba(41, 189, 224, 0.5);
+}
+/* line 170, ../sass/process.scss */
+.foot .footer {
+  display: flex;
+  align-items: center;
+  margin-left: 6%;
+  margin-right: 6%;
+  justify-content: space-around;
+}
+/* line 174, ../sass/process.scss */
+.foot .footer a {
+  width: 35%;
+  margin-top: 0.24rem;
+  height: 0.86rem;
+  line-height: 0.86rem;
+  background-color: #fbb435;
+  color: #ffffff;
+  font-size: 0.36rem;
+  text-align: center;
+  border-radius: 0.15rem;
+}
+/* line 185, ../sass/process.scss */
+.foot .footer .again {
+  background-color: #fbb435;
+  color: #ffffff;
+}
