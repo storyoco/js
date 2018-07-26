@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>流程</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="stylesheets/process.css">
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <script src="http://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/process.js"></script>
+    <script src="js/state-machine.min.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="header">
+            <input type="button" id="btn-back" class="btn-back">
+            <span class="proc_text">法官台本</span>
+            <a class="btn-close"></a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="day-box">
+            <div id="date_now" class="date_now">
+                <span class="time">第<span id="time-num" class="time-num"></span>天</span>
+                <img class="down" src="img/down.png">
+            </div>
+            <div class="proc-box">
+                <div class="left">
+                    <div class="border"></div>
+                    <div class="circle"></div>
+                    <div class="circle2"></div>
+                </div>
+                <div class="proc">
+                    <div id="kill" class="process"><div id="trg1" class="trg"></div>杀手杀人</div>
+                    <div id="speak" class="process"><div id="trg2" class="trg"></div>亡灵发表遗言</div>
+                    <div id="talk" class="process"><div id="trg3" class="trg"></div>玩家依次发言</div>
+                    <div id="vote" class="process"><div id="trg4" class="trg"></div>投票</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="footer">
+            <a class="again">结束游戏</a>
+            <a href="diary2.html" class="share">法官日志</a>
+        </div>
+    </div>
+</body>
+</html>

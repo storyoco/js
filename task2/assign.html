@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>配比</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="stylesheets/assign.css">
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/assign.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="header">
+            <input type="button" id="btn-back" class="btn-back"/>
+        </div>
+    </div>
+    <div class="content">
+        <div class="assign-title">玩家配比</div>
+        <div class="assign-list">
+            <div class="kill_man_num">
+                <div id="man" class="man">
+                    <img src="img/icon-man.png">
+                    平民&nbsp
+                    <span id="num-man">6</span>
+                    &nbsp人
+                </div>
+                <div id="killer" class="killer">
+                    <img src="img/icon-killer.png">
+                    杀手&nbsp
+                    <span id="num-killer">2</span>
+                    &nbsp人
+                </div>
+            </div>
+            <ul class="kill_man_list"></ul>
+        </div>
+        <div class="assign-box">
+            <input class="btn-num" type="button" value="点击设置"/>
+        </div>
+        <div class="assign-num">
+            <div class="num-input">
+                <div class="num-info">请输入玩家数量</div>
+                <input id="num" class="num" type="text" value="8" max="18" min="4">
+                <div class="num-player">玩家数量为4-18</div>
+            </div>
+            <div class="num-bar">
+                <input type="button" class="btn-reduce">
+                <input type="range" id="range" class="range" max="18" min="4" step="1" value="8">
+                <input type="button" class="btn-add">
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <input type="button" id="begin" class="begin" value="去发牌"/>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>成绩</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="stylesheets/result.css">
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <script src="http://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/result.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="header">
+            <a class="btn-home"></a>
+            <span class="result">游戏结果</span>
+            <input type="button" class="btn-info">
+        </div>
+    </div>
+    <div class="content">
+        <div class="cont-result">
+            <ul class="res-show">
+                <li class="show-pic">游戏结束</li>
+            </ul>
+            <ul class="res-list">
+                <li class="list-peo">剩余玩家：</li>
+                <li class="list-chac1">
+                    杀 手
+                    <span class="chac-kill"></span>
+                    人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    平 民
+                    <span class="chac-civy"></span>
+                    人
+                </li>
+            </ul>
+        </div>
+        <div class="cont-process">
+            <!--<ul id="process-col" class="process-col">-->
+                <!--<li class="process-time">-->
+                    <!--<span class="date">第<span id="date_time" class="date_time"></span>天</span>-->
+                <!--</li>-->
+                <!--<li class="night">-->
+                    <!--晚上：<span id="kill_num" class="kill_num"></span>号被杀手杀死，真实身份是<span id="kill_role" class="kill_role"></span>-->
+                <!--</li>-->
+                <!--<li class="day">-->
+                    <!--白天：<span id="vote_num" class="vote_num"></span>号被投票投死，真实身份是<span id="vote_role" class="vote_role"></span>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </div>
+    </div>
+    <div class="foot">
+        <div class="footer">
+            <a class="again">再来一局</a>
+        </div>
+    </div>
+</body>
+</html>
