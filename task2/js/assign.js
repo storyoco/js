@@ -7,6 +7,12 @@ $(document).ready(function () {
     var osliderBlock = document.getElementById("range");//滑块的值
     var player = [];//玩家人数
 
+    //防止页面后退
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
+
 //平民杀手人数
 //1杀手
     function num_player1 (){
@@ -108,7 +114,7 @@ $(document).ready(function () {
         if (num.value<4){
             alert("请输入正确的人数4~18");
             num.value=4;
-            //人数超出范围的话，弹出警告框，并且将方框和滑块的值重置为6
+            //人数超出范围的话，弹出警告框，并且将方框和滑块的值重置为8
         }
         else {
             osliderBlock.value=num.value;// 将玩家人数赋值给滑轮的值

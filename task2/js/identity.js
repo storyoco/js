@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    //防止页面后退
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
+
     //获取
     var player = JSON.parse(sessionStorage.getItem("player"));//玩家数组
     var btn_check = 0;

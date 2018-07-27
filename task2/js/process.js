@@ -3,12 +3,17 @@ $(document).ready(function () {
     //获取
     var day = sessionStorage.getItem('day');//天数
     var stateNow = sessionStorage.getItem("stateNow");//当前状态
-    // var player = JSON.parse(sessionStorage.getItem("player"));//玩家数组
     var arr_player = JSON.parse(sessionStorage.getItem("arr_player"));//玩家状态数组
     var killNum = sessionStorage.getItem('killNum');//被杀下标
     var arr_killNum = JSON.parse(sessionStorage.getItem('arr_killNum'));//被杀下标数组
     var voteNum = sessionStorage.getItem("voteNum");//投票下标
     var arr_voteNum = JSON.parse(sessionStorage.getItem('arr_voteNum'));//投票下标数组
+
+    //防止页面后退
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
 
     //返回
     $("#btn-back").click(function () {
@@ -84,8 +89,6 @@ $(document).ready(function () {
     //start/killed状态转变
     if (stateNow == null){
         stateNow = 'start';
-    } else if (stateNow == 'killed'){
-        stateNow = 'killed'
     }
 
     //动态增加天数

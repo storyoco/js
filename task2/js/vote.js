@@ -6,7 +6,6 @@ $(document).ready(function () {
     var arr_player = JSON.parse(sessionStorage.getItem("arr_player"));//玩家状态数组
     var player_state;
     var voteNum;//投票下标
-    // var arr_killNum = JSON.parse(sessionStorage.getItem("arr_killNum"));//杀人下标数组
     var arr_voteNum = JSON.parse(sessionStorage.getItem("arr_voteNum"));//投票下标数组
     var man_length = sessionStorage.getItem("man_length");//平民生还数
     var kill_length = sessionStorage.getItem("kill_length");//杀手生还数
@@ -14,6 +13,12 @@ $(document).ready(function () {
     //存储
     var stateNow = 'start';//重新开始状态
     sessionStorage.setItem("stateNow",stateNow);//存储状态
+
+    //防止页面后退
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
 
     //关闭
     $(".btn-close").click(function () {

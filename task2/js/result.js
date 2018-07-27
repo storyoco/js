@@ -9,6 +9,12 @@ $(document).ready(function () {
     var man_length = sessionStorage.getItem("man_length");//平民生还数
     var kill_length = sessionStorage.getItem("kill_length");//杀手生还数
 
+    //防止页面后退
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
+
     //返回
     $(".btn-home").click(function () {
         sessionStorage.clear();

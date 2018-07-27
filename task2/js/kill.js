@@ -5,11 +5,15 @@ $(document).ready(function () {
     var player_state = {};//玩家状态
     var arr_player = JSON.parse(sessionStorage.getItem("arr_player"));//玩家状态数组
     var arr_killNum = JSON.parse(sessionStorage.getItem("arr_killNum"));//杀手数组
-    // var arr_voteNum = JSON.parse(sessionStorage.getItem("arr_voteNum"));
-    // var day = sessionStorage.getItem('day');//天数
     var killNum;//被杀下标
     var man_length = sessionStorage.getItem("man_length");//平民生还人数
     var kill_length = sessionStorage.getItem("kill_length");//杀手生还人数
+
+    //防止页面后退
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
 
     //返回
     $("#btn-back").click(function () {

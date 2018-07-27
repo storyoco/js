@@ -6,6 +6,12 @@ $(document).ready(function () {
     var day = 1;//初始第一天
     sessionStorage.setItem('day',day);//存储天数
 
+    //防止页面后退
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
+
     //返回
     $("#btn-back").click(function () {
         sessionStorage.clear();
