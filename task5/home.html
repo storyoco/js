@@ -1,0 +1,37 @@
+<div class="header">
+    <a class="slide">萝卜多后台管理系统</a>
+    <div class="role">管理员</div>
+    <div class="name">admin</div>
+    <a class="out glyphicon glyphicon-off" ui-sref="login"></a>
+</div>
+
+<div class="slidebar">
+    <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">信息管理
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1">公司列表</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1">职位列表</a></li>
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">后台管理
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">账号管理</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">角色管理</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">修改密码</a></li>
+            <li role="presentation" ui-sref=".article_new"><a role="menuitem" tabindex="-1" href="">模块管理</a></li>
+            <li role="presentation" ui-sref=".article"><a role="menuitem" tabindex="-1" href="">article列表</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="content">
+    <div ui-view="">
+        Welcome!
+    </div>
+</div>
+
+
+

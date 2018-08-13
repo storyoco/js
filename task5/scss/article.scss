@@ -1,0 +1,102 @@
+@import "common";
+
+.inform {
+  .inform-box {
+    .inform-date {
+      display: flex;
+      align-items: center;
+      .date-build {
+        margin:{
+          left: .1rem;
+          right: .1rem;
+        }
+      }
+      .date-box {
+        .date-control {
+          background: white;
+        }
+      }
+    }
+  }
+  .inform-box2 {
+    margin-top: .3rem;
+    @extend %mid;
+    .state {
+      @extend %mid;
+      .state-text {
+        width: .75rem;
+        margin-left: .1rem;
+      }
+    }
+    .type {
+      margin-left: .4rem;
+      @extend %mid;
+      .type-text {
+        width: .75rem;
+        margin-left: .1rem;
+      }
+    }
+  }
+  .inform-box3 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: .3rem;
+    .btn-clear {
+      margin-right: .2rem;
+    }
+    .btn-search {
+      margin-right: .2rem;
+    }
+  }
+}
+
+.manage {
+  .manage-h {
+    background: white;
+    .manage-save {
+      float: right;
+      margin: {
+        left: .1rem;
+        right: .2rem;
+      }
+    }
+    .manage-add {
+      float: right;
+    }
+  }
+  .manage-cont {
+    padding: {
+      left:0;
+      right:0;
+    }
+    th {
+      text-align: center;
+    }
+    tr {
+      td {
+        text-align: center;
+        button {
+          margin-bottom: .1rem;
+        }
+      }
+    }
+    .pgbox {
+      @extend %mid;
+      @extend %between;
+      .pgnum {
+        width: .4rem;
+        border: solid 1px grey;
+        text-align: center;
+      }
+      .pggo {
+        @extend .pgnum;
+      }
+      .pgbtn {
+        margin-left: .2rem;
+      }
+    }
+
+  }
+}
+
+

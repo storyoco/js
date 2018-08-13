@@ -1,0 +1,109 @@
+<div ng-controller="artCtrl">
+    <div class="inform panel panel-default container-fluid">
+        <div class="panel-body">
+            <form class="inform-box form-inline row">
+                <div class="inform-date form-group">
+                    <div>
+                        <label class="date-build control-label" for="dtp_input">修改时间</label>
+                        <div class="date-box input-group date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
+                            <input ng-model="strDate" class="date-control form-control" size="16" type="text" value="" readonly>
+                            <span class="date-addon input-group-addon"><span class="date-calendar glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input class="date-input" id="dtp_input" type="hidden" value=""/><br/>
+                    </div>
+                    <div>
+                        <label class="date-build control-label" for="dtp_input2">—</label>
+                        <div class="date-box input-group date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input ng-model="endDate" class="date-control form-control" size="16" type="text" value="" readonly>
+                            <span class="date-addon input-group-addon"><span class="date-calendar glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input class="date-input2" id="dtp_input2" type="hidden" value=""/><br/>
+                    </div>
+                </div>
+            </form>
+            <form class="inform-box2 row">
+                <div class="state input-group">
+                    <div class="state-text">状 态</div>
+                    <select class="form-control" ng-model="selectState" ng-options="x.key as x.value for x in state">
+                        <option value>全部</option>
+                    </select>
+                </div>
+                <div class="type input-group">
+                    <div class="type-text">类 型</div>
+                    <select class="form-control" ng-model="selectType" ng-options="y.key as y.value for y in type">
+                        <option value>全部</option>
+                    </select>
+                </div>
+            </form>
+            <form class="inform-box3 row">
+                <button class="btn-search btn btn-success" ng-model="search" ng-click="searchBtn()">搜索</button>
+                <button class="btn-clear btn btn-danger">清空</button>
+            </form>
+        </div>
+    </div>
+    <div class="manage panel panel-default container-fluid">
+        <div class="manage-h panel-heading row">
+            <div class="panel-title col-sm-3">Article管理</div>
+            <button class="manage-save btn btn-primary btn-xs">保存排序</button>
+            <button class="manage-add btn btn-primary btn-xs">+ 新增</button>
+        </div>
+        <div class="manage-cont panel-body">
+            <div class="panel panel-default">
+                <table class="table">
+                    <tr>
+                        <th>序号</th>
+                        <th>图片</th>
+                        <th>标题</th>
+                        <th>类型</th>
+                        <th>创建者</th>
+                        <th>创建时间</th>
+                        <th>修改时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr ng-repeat="x in list">
+                        <td>{{$index+1}}</td>
+                        <td><img src="{{x.img}}" style="width: 60px;height: 60px"></td>
+                        <td>{{x.title}}</td>
+                        <td>{{x.type | types}}</td>
+                        <td>{{x.author}}</td>
+                        <td>{{x.createAt}}</td>
+                        <td>{{x.updateAt}}</td>
+                        <td>{{x.status | status}}</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">下线</button>
+                            <button class="btn btn-success btn-sm">编辑</button>
+                            <button class="btn btn-danger btn-sm">删除</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pgbox">
+                <div>
+                    每页显示
+                    <input class="pgnum" ng-model="pgnum" type="text">
+                    条
+                </div>
+                <ul uib-pagination
+                    total-items="totalItems"
+                    ng-model="currentPage"
+                    ng-change="page()"
+                    max-size="5"
+                    items-per-page="size"
+                    first-text="<<"
+                    previous-text="<"
+                    next-text=">"
+                    last-text=">>"
+                    boundary-links="true"
+                    boundary-link-numbers="true">
+                </ul>
+                <div>
+                    去第
+                    <input class="pggo" ng-model="pggo" type="text">
+                    页
+                    <button class="pgbtn btn btn-danger" ng-click="pgbtn()" type="button">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

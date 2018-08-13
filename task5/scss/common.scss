@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+//颜色变量
+$blue: #0096d3;
+$dblue: #343e47;
+
+//flex弹性布局
+//垂直居中
+%mid {
+  display: flex;
+  align-items: center;
+}
+//水平居中
+%center {
+  display: flex;
+  justify-content: center;
+}
+//水平垂直居中
+%mid-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//两端分布
+%between {
+  display: flex;
+  justify-content: space-between;
+}
+//纵轴排列
+%column {
+  display: flex;
+  flex-direction: column;
+}
+//允许分排
+%wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+//margin左右
+%m2 {
+  margin: {
+    left: 2%;
+    right: 2%;
+  }
+}
+%m6 {
+  margin: {
+    left: 6%;
+    right: 6%;
+  }
+}
+
+//padding左右
+%p1 {
+  padding: {
+    left: 1%;
+    right: 1%;
+  }
+}
+%p2 {
+  padding: {
+    left: 2%;
+    right: 2%;
+  }
+}
+%p6 {
+  padding: {
+    left: 6%;
+    right: 6%;
+  }
+}
