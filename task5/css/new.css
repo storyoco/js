@@ -1,0 +1,36 @@
+/* line 4, ../scss/new.scss */
+.new .formbox {
+  margin: .2rem;
+}
+/* line 6, ../scss/new.scss */
+.new .formbox .img {
+  height: 2rem;
+  margin-left: calc(16.66666667% + 15px);
+}
+/* line 10, ../scss/new.scss */
+.new .formbox .imgload {
+  max-width: 65%;
+  margin: 0 auto;
+}
+/* line 14, ../scss/new.scss */
+.new .formbox .btn-up {
+  margin-left: 18%;
+}
+/* line 17, ../scss/new.scss */
+.new .formbox .btn-sv {
+  margin-left: .2rem;
+}
+/* line 20, ../scss/new.scss */
+.new .formbox .btn-cc {
+  float: right;
+  margin-right: 20%;
+}
+/* line 26, ../scss/new.scss */
+.new .choiceBox .choice, .new .choiceBox .preview {
+  margin-left: calc(16.66666667% + 15px);
+  margin-bottom: .2rem;
+}
+/* line 31, ../scss/new.scss */
+.new .w-e-toolbar {
+  flex-wrap: wrap;
+}

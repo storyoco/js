@@ -9,8 +9,28 @@ app.controller('artCtrl',function ($scope,$http,$state,$stateParams,state,type) 
         todayHighlight: 1,
         startView: 2,
         minView: 2,
-        forceParse: 0
+        forceParse: 0,
     });
+    var myDate = new Date();
+    var date = myDate.toLocaleDateString();
+    $scope.end = function(){
+        $('#date1').datetimepicker(
+            'setEndDate',$scope.endDate
+        );
+    };
+    $scope.str = function (){
+        $('#date2').datetimepicker(
+            'setStartDate',$scope.strDate
+        );
+    }
+    if ($scope.endDate == undefined){
+        $('#date1').datetimepicker(
+            'setEndDate',date
+        );
+    }
+    $('#date2').datetimepicker(
+        'setEndDate',date
+    );
 
     //下拉选项
     $scope.state = state;
@@ -18,7 +38,7 @@ app.controller('artCtrl',function ($scope,$http,$state,$stateParams,state,type) 
 
     //请求数据
     $http({
-        method:"get",
+        method:"GET",
         url:"/carrots-admin-ajax/a/article/search",
         params:{
             page: $stateParams.page, //使用$stateParams获取传递的参数
@@ -75,28 +95,51 @@ app.controller('artCtrl',function ($scope,$http,$state,$stateParams,state,type) 
 
             //搜索
             $scope.searchBtn = function () {
-
-                //转换时间戳
-                var strTime = new Date($scope.strDate);
-                var endTime = new Date($scope.endDate);
-                var time1 = strTime.getTime();
-                var time2 = endTime.getTime();
+                var strDate = new Date($scope.strDate);
+                var endDate = new Date($scope.endDate);
+                var time1 = strDate.getTime();
+                var time2 = endDate.getTime();
 
                 //若日期没选，则取时间为空，因为时间值会变成NaN，发送的时间值的时候会报错
                 if (time1 != time1 || time2 != time2){
                     time1 = '';
-                    time2 = ''
-                } else if (time1 == time2){//选择同一天需给另一时间戳添加参数
-                    time2 = time2 + 86399999
+                    time2 = '';
+                } else if (time1 == time2) {//选择同一天需给另一时间戳添加参数
+                    time2 += 86399999;
+                    //进行搜索跳转
                 }
-
-                //进行搜索跳转
                 $state.go("home.article",{
                     startAt:time1,
                     endAt:time2,
                     status:$scope.selectState,
                     type:$scope.selectType
+                });
+
+            };
+
+            //清除
+            $scope.clearBtn = function () {
+                $state.go("home.article",{
+                    startAt:'',
+                    endAt:'',
+                    status:'',
+                    type:''
                 })
+            };
+
+            //新增article按钮
+            $scope.newBtn = function(){
+                var Btn = 1;
+                sessionStorage.setItem('Btn',Btn);
+                $state.go("home.new",{})
+            };
+            //编辑
+            $scope.setBtn = function(){
+                var Btn = 2;
+                var setId = $scope.list[this.$index].id;
+                sessionStorage.setItem('setId',setId);
+                sessionStorage.setItem('Btn',Btn);
+                $state.go("home.new",{})
             };
 
             //存储选择
@@ -106,43 +149,70 @@ app.controller('artCtrl',function ($scope,$http,$state,$stateParams,state,type) 
             } else {
                 var str = new Date(Number($stateParams.startAt));
                 var end = new Date(Number($stateParams.endAt));
-                Ys = str.getFullYear()+'-';
-                Ms = (str.getMonth()+1 < 10 ? '0'+(str.getMonth()+1) : str.getMonth()+1) + '-';
+                Ys = str.getFullYear()+'/';
+                Ms = (str.getMonth()+1 < 10 ? '0'+ (str.getMonth()+1) : str.getMonth()+1) + '/';
                 Ds = (str.getDate() < 10 ? '0'+ str.getDate() : str.getDate());
-                Ye = end.getFullYear()+'-';
-                Me = (end.getMonth()+1 < 10 ? '0'+(end.getMonth()+1) : end.getMonth()+1) + '-';
+                Ye = end.getFullYear()+'/';
+                Me = (end.getMonth()+1 < 10 ? '0'+(end.getMonth()+1) : end.getMonth()+1) + '/';
                 De = (end.getDate() < 10 ? '0'+ end.getDate() : end.getDate());
                 $scope.strDate = Ys+ Ms + Ds;
                 $scope.endDate = Ye+ Me + De;
             }
+
             //状态类型
             $scope.selectState = $stateParams.status;
             $scope.selectType = $stateParams.type;
 
-            //时间戳转换
-            var arr_list = resp.data.data.articleList;
-            for (i=0; i<arr_list.length; i++){
-                //时间
-                var date1 = new Date(arr_list[i].createAt);
-                Y1 = date1.getFullYear() + '-';
-                M1 = (date1.getMonth()+1 < 10 ? '0'+(date1.getMonth()+1) : date1.getMonth()+1) + '-';
-                D1 = (date1.getDate() < 10 ? '0'+ date1.getDate() : date1.getDate()) + ' ';
-                h1 = (date1.getHours() < 10 ? '0'+ date1.getHours() : date1.getHours()) + ':';
-                m1 = (date1.getMinutes() < 10 ? '0'+ date1.getMinutes() : date1.getMinutes()) + ':';
-                s1 = (date1.getSeconds() < 10 ? '0'+ date1.getSeconds() : date1.getSeconds()) ;
-
-                var date2 = new Date(arr_list[i].updateAt);
-                Y2 = date2.getFullYear() + '-';
-                M2 = (date2.getMonth()+1 < 10 ? '0'+(date2.getMonth()+1) : date2.getMonth()+1) + '-';
-                D2 = (date2.getDate() < 10 ? '0'+ date2.getDate() : date2.getDate()) + ' ';
-                h2 = (date1.getHours() < 10 ? '0'+ date1.getHours() : date1.getHours()) + ':';
-                m2 = (date1.getMinutes() < 10 ? '0'+ date1.getMinutes() : date1.getMinutes()) + ':';
-                s2 = (date1.getSeconds() < 10 ? '0'+ date1.getSeconds() : date1.getSeconds()) ;
-                arr_list[i].createAt = Y1+M1+D1+h1+m1+s1;
-                arr_list[i].updateAt = Y2+M2+D2+h2+m2+s2;
+            //上下线按钮
+            for (i=0;i<$scope.list.length;i++){
+                if ($scope.list[i].status == 1) {
+                    $scope.list[i].line = '上线'
+                } else {
+                    $scope.list[i].line = '下线'
+                }
             }
+            $scope.changeLine = function (){
+                var lineId = $scope.list[this.$index].id;
+                var lineStatus = $scope.list[this.$index].status;
+                if (lineStatus==2) {
+                    var onThis = confirm("确认下线此数据？");
+                    var line = 1;
+                } else {
+                    var onThis = confirm("确认上线此数据？");
+                    var line = 2;
+                }
+                if (onThis == true){
+                    $http({
+                        method:'put',
+                        url:"/carrots-admin-ajax/a/u/article/status",
+                        params:{
+                            id:lineId,
+                            status:line
+                        }
+                    }).then(function () {
+                        $state.reload();
+                    })
+                }
+            };
+
+            //删除
+            $scope.delete = function () {
+                var clearThis = confirm("确认删除此数据？");
+                if (clearThis == true){
+                    var clearId = $scope.list[this.$index].id;
+                    $http({
+                        method:'delete',
+                        url:"/carrots-admin-ajax/a/u/article/" + clearId,
+                    }).then(function () {
+                        $state.reload();
+                    })
+                }
+            }
+
         }
     );
+
+
 
 });
 

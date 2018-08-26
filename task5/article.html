@@ -5,19 +5,19 @@
                 <div class="inform-date form-group">
                     <div>
                         <label class="date-build control-label" for="dtp_input">修改时间</label>
-                        <div class="date-box input-group date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
-                            <input ng-model="strDate" class="date-control form-control" size="16" type="text" value="" readonly>
-                            <span class="date-addon input-group-addon"><span class="date-calendar glyphicon glyphicon-calendar"></span></span>
+                        <div id="date1" class="date-box input-group date form_date" data-date="" data-date-format="yyyy mm dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
+                            <input ng-model="strDate" ng-change="str()" class="date-control form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="date-calendar glyphicon glyphicon-calendar"></span></span>
                         </div>
-                        <input class="date-input" id="dtp_input" type="hidden" value=""/><br/>
+                        <input id="dtp_input" type="hidden" value=""/><br/>
                     </div>
                     <div>
                         <label class="date-build control-label" for="dtp_input2">—</label>
-                        <div class="date-box input-group date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                            <input ng-model="endDate" class="date-control form-control" size="16" type="text" value="" readonly>
-                            <span class="date-addon input-group-addon"><span class="date-calendar glyphicon glyphicon-calendar"></span></span>
+                        <div  id="date2" class="date-box input-group date form_date" data-date="" data-date-format="yyyy mm dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input ng-model="endDate" ng-change="end()" class="date-control form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="date-calendar glyphicon glyphicon-calendar"></span></span>
                         </div>
-                        <input class="date-input2" id="dtp_input2" type="hidden" value=""/><br/>
+                        <input id="dtp_input2" type="hidden" value=""/><br/>
                     </div>
                 </div>
             </form>
@@ -37,15 +37,14 @@
             </form>
             <form class="inform-box3 row">
                 <button class="btn-search btn btn-success" ng-model="search" ng-click="searchBtn()">搜索</button>
-                <button class="btn-clear btn btn-danger">清空</button>
+                <button class="btn-clear btn btn-danger" ng-model="clear" ng-click="clearBtn()">清空</button>
             </form>
         </div>
     </div>
     <div class="manage panel panel-default container-fluid">
         <div class="manage-h panel-heading row">
             <div class="panel-title col-sm-3">Article管理</div>
-            <button class="manage-save btn btn-primary btn-xs">保存排序</button>
-            <button class="manage-add btn btn-primary btn-xs">+ 新增</button>
+            <button ng-click="newBtn()" class="manage-add btn btn-primary btn-xs">+ 新增</button>
         </div>
         <div class="manage-cont panel-body">
             <div class="panel panel-default">
@@ -67,23 +66,19 @@
                         <td>{{x.title}}</td>
                         <td>{{x.type | types}}</td>
                         <td>{{x.author}}</td>
-                        <td>{{x.createAt}}</td>
-                        <td>{{x.updateAt}}</td>
+                        <td>{{x.createAt | date : 'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td>{{x.updateAt | date : 'yyyy-MM-dd HH:mm:ss'}}</td>
                         <td>{{x.status | status}}</td>
                         <td>
-                            <button class="btn btn-warning btn-sm">下线</button>
-                            <button class="btn btn-success btn-sm">编辑</button>
-                            <button class="btn btn-danger btn-sm">删除</button>
+                            <button class="btn btn-warning btn-sm" ng-model="line" ng-click="changeLine()">{{x.line}}</button>
+                            <button class="btn btn-success btn-sm" ng-click="setBtn()">编辑</button>
+                            <button class="btn btn-danger btn-sm" ng-click="delete()">删除</button>
                         </td>
                     </tr>
                 </table>
             </div>
             <div class="pgbox">
-                <div>
-                    每页显示
-                    <input class="pgnum" ng-model="pgnum" type="text">
-                    条
-                </div>
+                <pgnum></pgnum>
                 <ul uib-pagination
                     total-items="totalItems"
                     ng-model="currentPage"
@@ -97,13 +92,10 @@
                     boundary-links="true"
                     boundary-link-numbers="true">
                 </ul>
-                <div>
-                    去第
-                    <input class="pggo" ng-model="pggo" type="text">
-                    页
-                    <button class="pgbtn btn btn-danger" ng-click="pgbtn()" type="button">确定</button>
-                </div>
+                <pggo></pggo>
             </div>
         </div>
     </div>
 </div>
+
+

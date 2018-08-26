@@ -1,4 +1,4 @@
-//js
+// js
 // window.onload = function () {
 //     var request = new XMLHttpRequest();//创建XHR对象
 //     var btn = document.getElementById('btn');//登录
@@ -14,16 +14,16 @@
 //         //发送请求
 //         request.send("name=" + account.value + "&pwd=" + number.value);
 //         //监听浏览器
-//         request.onreadystatechange=function(){
-//             if (request.readyState==4){
-//                 if (request.status==200){
+//         request.onreadystatechange=function(){//readyState改变时调用该函数
+//             if (request.readyState==4){//XHR请求完成响应就绪
+//                 if (request.status==200){//OK
 //                     //获得服务器响应信息
 //                     var response = JSON.parse(request.responseText);
 //                     //账密校验
 //                     if (response.message == 'success') {
-//                         location.href = "http://dev.admin.carrots.ptteng.com/#/dashboard";
+//                         location.href = "http://dev.admin.carrots.ptteng.com/#/dashboard";//校验成功登录跳转
 //                     }else {
-//                         point.innerHTML = response.message;
+//                         point.innerHTML = response.message;//校验失败显示错误
 //                     }
 //                 }
 //             }
@@ -31,6 +31,7 @@
 //     }
 //     //登录
 //     btn.onclick = login;
+//
 // };
 
 
@@ -67,7 +68,7 @@
 
 
 //angular
-app.controller('loginCtrl',function ($scope,$http) {
+app.controller('loginCtrl',function ($scope,$state,$http) {
     $scope.btnLogin = function() {
         $http({
             method:"post",
@@ -79,7 +80,8 @@ app.controller('loginCtrl',function ($scope,$http) {
         }) .then(
             function (resp){
             if (resp.data.code == 0) {
-                location.href = "/home";
+                sessionStorage.setItem('welcome',1)
+                $state.go('home',{})
             } else {
                 $scope.point = resp.data.message;
             }

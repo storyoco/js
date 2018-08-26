@@ -62,39 +62,33 @@
   background: white;
 }
 /* line 56, ../scss/article.scss */
-.manage .manage-h .manage-save {
-  float: right;
-  margin-left: .1rem;
-  margin-right: .2rem;
-}
-/* line 63, ../scss/article.scss */
 .manage .manage-h .manage-add {
   float: right;
 }
-/* line 67, ../scss/article.scss */
+/* line 60, ../scss/article.scss */
 .manage .manage-cont {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 72, ../scss/article.scss */
+/* line 65, ../scss/article.scss */
 .manage .manage-cont th {
   text-align: center;
 }
-/* line 76, ../scss/article.scss */
+/* line 69, ../scss/article.scss */
 .manage .manage-cont tr td {
   text-align: center;
 }
-/* line 78, ../scss/article.scss */
+/* line 71, ../scss/article.scss */
 .manage .manage-cont tr td button {
   margin-bottom: .1rem;
 }
-/* line 86, ../scss/article.scss */
+/* line 79, ../scss/article.scss */
 .manage .manage-cont .pgbox .pgnum, .manage .manage-cont .pgbox .pggo {
   width: .4rem;
   border: solid 1px grey;
   text-align: center;
 }
-/* line 94, ../scss/article.scss */
+/* line 87, ../scss/article.scss */
 .manage .manage-cont .pgbox .pgbtn {
   margin-left: .2rem;
 }

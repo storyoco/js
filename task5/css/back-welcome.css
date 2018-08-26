@@ -23,23 +23,24 @@ ul, li, a, a:hover, a:link {
 /* line 19, ../scss/back-welcome.scss */
 a:hover {
   text-underline: none;
+  cursor: pointer;
 }
 
-/* line 22, ../scss/back-welcome.scss */
+/* line 23, ../scss/back-welcome.scss */
 input {
   background: none;
   border: 0;
   outline: none;
 }
 
-/* line 29, ../scss/back-welcome.scss */
+/* line 30, ../scss/back-welcome.scss */
 .header {
   position: relative;
   background: white;
   display: flex;
   align-items: center;
 }
-/* line 34, ../scss/back-welcome.scss */
+/* line 35, ../scss/back-welcome.scss */
 .header .slide {
   padding: .1rem .41rem;
   background: #343e47;
@@ -48,7 +49,7 @@ input {
   font-size: .18rem;
   border-bottom: solid .01rem #55626b;
 }
-/* line 42, ../scss/back-welcome.scss */
+/* line 43, ../scss/back-welcome.scss */
 .header .role, .header .name, .header .out {
   position: absolute;
   right: 1.3rem;
@@ -57,76 +58,56 @@ input {
   color: #0096d3;
   border-right: solid #d1d1d1 .01rem;
 }
-/* line 50, ../scss/back-welcome.scss */
+/* line 51, ../scss/back-welcome.scss */
 .header .name {
   right: .7rem;
 }
-/* line 54, ../scss/back-welcome.scss */
+/* line 55, ../scss/back-welcome.scss */
 .header .out {
   right: .3rem;
   border-right: 0;
 }
-/* line 59, ../scss/back-welcome.scss */
+/* line 60, ../scss/back-welcome.scss */
 .header .glyphicon {
   top: auto;
 }
 
-/* line 64, ../scss/back-welcome.scss */
-.slidebar {
+/* line 65, ../scss/back-welcome.scss */
+.home-sidebar {
+  background: #343e47;
+  color: white;
+  width: 2.44rem;
+  min-height: calc(100vh - .39rem);
+}
+/* line 71, ../scss/back-welcome.scss */
+.home-sidebar .sidebar-box .home-sidebar-title {
+  padding: .1rem;
+  text-indent: .15rem;
+  cursor: pointer;
+}
+/* line 75, ../scss/back-welcome.scss */
+.home-sidebar .sidebar-box .home-sidebar-title:hover {
+  background: #3b4b54;
+}
+/* line 80, ../scss/back-welcome.scss */
+.home-sidebar .sidebar-box .home-sidebar-content a {
+  padding: .1rem;
+  text-indent: .7rem;
+  color: white;
+  width: 2.44rem;
   display: inline-block;
-  height: 100vh;
-  width: 2.44rem;
-  background: #343e47;
 }
-/* line 69, ../scss/back-welcome.scss */
-.slidebar .dropdown {
-  width: 2.44rem;
-  background: #343e47;
+/* line 86, ../scss/back-welcome.scss */
+.home-sidebar .sidebar-box .home-sidebar-content a:hover {
+  background: #50626b;
 }
-/* line 72, ../scss/back-welcome.scss */
-.slidebar .dropdown button {
-  width: 2.44rem;
-  border: none;
-  border-radius: 0;
-  background: #343e47;
-  color: white;
-  font-size: .16rem;
-  text-indent: -.85rem;
-  padding-top: .1rem;
-  padding-bottom: .1rem;
-}
-/* line 85, ../scss/back-welcome.scss */
-.slidebar .dropdown .btn:focus {
-  outline: none;
-}
-/* line 88, ../scss/back-welcome.scss */
-.slidebar .dropdown ul {
-  position: relative;
-  left: auto;
-  float: none;
-  color: white;
-  background: #343e47;
-}
-/* line 94, ../scss/back-welcome.scss */
-.slidebar .dropdown ul li {
-  background: #343e47;
-}
-/* line 96, ../scss/back-welcome.scss */
-.slidebar .dropdown ul li a {
-  padding-top: .07rem;
-  padding-bottom: .07rem;
-  text-indent: .55rem;
-  color: white;
-  font-size: .15rem;
-}
-/* line 104, ../scss/back-welcome.scss */
-.slidebar .dropdown ul li a:hover {
-  background: #62696f;
+/* line 91, ../scss/back-welcome.scss */
+.home-sidebar .sidebar-box .tcontent {
+  background: #50626b;
 }
 
-/* line 113, ../scss/back-welcome.scss */
+/* line 98, ../scss/back-welcome.scss */
 .content {
-  position: absolute;
   display: inline-block;
   margin: .2rem .2rem;
   width: calc(100% - 2.85rem);

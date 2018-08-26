@@ -2,7 +2,7 @@ var app = angular.module("app", ['ui.router','ngMessages','ui.bootstrap']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.when("", "/home");
+    $urlRouterProvider.when("", "/login");
 
     $stateProvider
         .state("home", {
@@ -17,9 +17,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url:"/article?page&size&total&startAt&endAt&status&type&id",
             templateUrl: "article.html"
         })
-        .state("home.article_new", {
-            url:"/article_new",
-            templateUrl: "article_new.html"
+        .state("home.new", {
+            url:"/new?id",
+            templateUrl: "new.html"
         });
 });
-

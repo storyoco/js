@@ -16,4 +16,17 @@ app
                 case 3: return '行业大图';
             }
         }
+    })
+    .filter('industry',function () {
+        return function (industry) {
+            switch (industry){
+                case 0: return '移动互联网';
+                case 1: return '电子商务';
+                case 2: return '企业服务';
+                case 3: return 'O2O';
+                case 4: return '教育';
+                case 5: return '金融';
+                case 6: return '游戏';
+            }
+        }
     });
