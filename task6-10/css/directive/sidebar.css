@@ -1,0 +1,33 @@
+/* line 5, ../scss/sidebar.scss */
+.home-sidebar {
+  background: #343e47;
+  color: white;
+  width: 2.44rem;
+  min-height: calc(100vh - .39rem);
+}
+/* line 11, ../scss/sidebar.scss */
+.home-sidebar .sidebar-box .home-sidebar-title {
+  padding: .1rem;
+  text-indent: .15rem;
+  cursor: pointer;
+}
+/* line 15, ../scss/sidebar.scss */
+.home-sidebar .sidebar-box .home-sidebar-title:hover {
+  background: #3b4b54;
+}
+/* line 20, ../scss/sidebar.scss */
+.home-sidebar .sidebar-box .home-sidebar-content a {
+  padding: .1rem;
+  text-indent: .7rem;
+  color: white;
+  width: 2.44rem;
+  display: inline-block;
+}
+/* line 26, ../scss/sidebar.scss */
+.home-sidebar .sidebar-box .home-sidebar-content a:hover {
+  background: #50626b;
+}
+/* line 31, ../scss/sidebar.scss */
+.home-sidebar .sidebar-box .tcontent {
+  background: #50626b;
+}

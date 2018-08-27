@@ -1,0 +1,38 @@
+/* line 5, ../scss/imgupload.scss */
+.formbox {
+  margin: .2rem;
+}
+/* line 7, ../scss/imgupload.scss */
+.formbox .img {
+  height: 2rem;
+  margin-left: calc(16.66666667% + 15px);
+}
+/* line 11, ../scss/imgupload.scss */
+.formbox .imgload {
+  max-width: 65%;
+  margin: 0 auto;
+}
+/* line 15, ../scss/imgupload.scss */
+.formbox .btn-up {
+  margin-left: 18%;
+}
+/* line 18, ../scss/imgupload.scss */
+.formbox .btn-sv {
+  margin-left: .2rem;
+}
+/* line 21, ../scss/imgupload.scss */
+.formbox .btn-cc {
+  float: right;
+  margin-right: 20%;
+}
+
+/* line 27, ../scss/imgupload.scss */
+.choiceBox .choice, .choiceBox .preview {
+  margin-left: calc(16.66666667% + 15px);
+  margin-bottom: .2rem;
+}
+
+/* line 32, ../scss/imgupload.scss */
+.w-e-toolbar {
+  flex-wrap: wrap;
+}

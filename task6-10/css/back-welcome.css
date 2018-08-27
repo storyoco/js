@@ -1,0 +1,80 @@
+/* line 3, ../scss/back-welcome.scss */
+html {
+  font-size: 625%;
+}
+
+/* line 6, ../scss/back-welcome.scss */
+body {
+  font-size: 16px;
+  font-size: .16rem;
+  width: 100%;
+  background: #f5f5f5;
+  height: auto;
+  margin: 0;
+  display: block;
+}
+
+/* line 15, ../scss/back-welcome.scss */
+ul, li, a, a:hover, a:link {
+  list-style: none;
+  text-decoration: none;
+}
+
+/* line 19, ../scss/back-welcome.scss */
+a:hover {
+  text-underline: none;
+  cursor: pointer;
+}
+
+/* line 23, ../scss/back-welcome.scss */
+input {
+  background: none;
+  border: 0;
+  outline: none;
+}
+
+/* line 30, ../scss/back-welcome.scss */
+.header {
+  position: relative;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+/* line 35, ../scss/back-welcome.scss */
+.header .slide {
+  padding: .1rem .41rem;
+  background: #343e47;
+  color: white;
+  font-weight: bold;
+  font-size: .18rem;
+  border-bottom: solid .01rem #55626b;
+}
+/* line 43, ../scss/back-welcome.scss */
+.header .role, .header .name, .header .out {
+  position: absolute;
+  right: 1.3rem;
+  padding: 0 .1rem;
+  font-size: .14rem;
+  color: #0096d3;
+  border-right: solid #d1d1d1 .01rem;
+}
+/* line 51, ../scss/back-welcome.scss */
+.header .name {
+  right: .7rem;
+}
+/* line 55, ../scss/back-welcome.scss */
+.header .out {
+  right: .3rem;
+  border-right: 0;
+}
+/* line 60, ../scss/back-welcome.scss */
+.header .glyphicon {
+  top: auto;
+}
+
+/* line 65, ../scss/back-welcome.scss */
+.content {
+  display: inline-block;
+  margin: .2rem .2rem;
+  width: calc(100% - 2.85rem);
+}

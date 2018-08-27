@@ -1,0 +1,22 @@
+<div ng-controller="slideCtrl">
+    <div class="header">
+        <a class="slide">萝卜多后台管理系统</a>
+        <div class="role">管理员</div>
+        <div class="name">admin</div>
+        <a class="out glyphicon glyphicon-off" ng-click="out()"></a>
+    </div>
+    <div class="bigbox" style="display: flex">
+        <side-bar></side-bar>
+        <div class="content">
+            <div ng-model="welcome" ui-view="">
+               {{welcome}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

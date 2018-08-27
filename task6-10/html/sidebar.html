@@ -1,0 +1,19 @@
+<div class="home-sidebar">
+    <div class="sidebar-box" ng-repeat="x in sideBar">
+        <div class="home-sidebar-title"
+             ng-click="getHomeTitle($index)">
+            <span class="glyphicon glyphicon-pencil icon"></span>
+            <span>{{x.sideBarTitle}}</span>
+            <span ng-class="ggtitle == $index?'glyphicon glyphicon-menu-down':'glyphicon glyphicon-menu-right'"></span>
+        </div>
+        <div class="home-sidebar-content"
+             ng-show="ggtitle == $parent.$index"
+             ng-repeat="y in x.sideBarContent"
+             ng-click="getHomeContent(y.sideBarName, $parent.$index)"
+             ng-class="{tcontent: ggcontent === y.sideBarName}">
+            <a ui-sref="{{y.url}}">
+                <span>{{y.sideBarName}}</span>
+            </a>
+        </div>
+    </div>
+</div>

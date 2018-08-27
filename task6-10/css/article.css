@@ -1,0 +1,78 @@
+/* line 9, ../scss/common.scss */
+.inform .inform-box2, .inform .inform-box2 .state, .inform .inform-box2 .type {
+  display: flex;
+  align-items: center;
+}
+
+/* line 5, ../scss/article.scss */
+.inform .inform-box .inform-date {
+  display: flex;
+  align-items: center;
+}
+/* line 8, ../scss/article.scss */
+.inform .inform-box .inform-date .date-build {
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+/* line 15, ../scss/article.scss */
+.inform .inform-box .inform-date .date-box .date-control {
+  background: white;
+}
+/* line 21, ../scss/article.scss */
+.inform .inform-box2 {
+  margin-top: .3rem;
+}
+/* line 26, ../scss/article.scss */
+.inform .inform-box2 .state .state-text {
+  width: .75rem;
+  margin-left: .1rem;
+}
+/* line 31, ../scss/article.scss */
+.inform .inform-box2 .type {
+  margin-left: .4rem;
+}
+/* line 34, ../scss/article.scss */
+.inform .inform-box2 .type .type-text {
+  width: .75rem;
+  margin-left: .1rem;
+}
+/* line 40, ../scss/article.scss */
+.inform .inform-box3 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: .3rem;
+}
+/* line 44, ../scss/article.scss */
+.inform .inform-box3 .btn-clear {
+  margin-right: .2rem;
+}
+/* line 47, ../scss/article.scss */
+.inform .inform-box3 .btn-search {
+  margin-right: .2rem;
+}
+
+/* line 54, ../scss/article.scss */
+.manage .manage-h {
+  background: white;
+}
+/* line 56, ../scss/article.scss */
+.manage .manage-h .manage-add {
+  float: right;
+}
+/* line 60, ../scss/article.scss */
+.manage .manage-cont {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 65, ../scss/article.scss */
+.manage .manage-cont th {
+  text-align: center;
+}
+/* line 69, ../scss/article.scss */
+.manage .manage-cont tr td {
+  text-align: center;
+}
+/* line 71, ../scss/article.scss */
+.manage .manage-cont tr td button {
+  margin-bottom: .1rem;
+}

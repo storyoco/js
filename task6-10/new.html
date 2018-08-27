@@ -1,0 +1,62 @@
+<div ng-controller="newCtrl" class="new">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" ng-model="title">{{title}}</h3>
+        </div>
+        <form class="panel-body form-horizontal" role="form" name="myForm">
+            <div class="form-group formbox">
+                <label for="name" class="col-sm-2 control-label"><span style="color: red">*</span>标题名称</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" name="title" ng-model="titleName" id="name" value="{{titleName}}" required>
+                    <span style="color: red" ng-show="myForm.title.$dirty && myForm.title.$invalid">
+                        <span ng-show="myForm.title.$error.required">请填写标题</span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group formbox">
+                <label class="col-sm-2 control-label"><span style="color: red">*</span>类&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp型</label>
+                <div class=" col-sm-3">
+                    <select class="form-control" name="type" ng-model="selectType" ng-change="selectChange()" ng-options="x.key as x.value for x in type" required>
+                        <option value>请选择</option>
+                    </select>
+                    <span style="color: red" ng-show="myForm.type.$dirty && myForm.type.$invalid">
+                        <span ng-show="myForm.type.$error.required">请选择类型</span>
+                    </span>
+                </div>
+                <div class=" col-sm-3" ng-show="selectShow">
+                    <select class="form-control" name="type2" ng-model="selectIndus" ng-options="y.key as y.value for y in industry" required>
+                        <option value>请选择</option>
+                    </select>
+                    <span style="color: red" ng-show="myForm.type2.$dirty && myForm.type2.$invalid">
+                        <span ng-show="myForm.type2.$error.required">请选择类型</span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group formbox">
+                <label class="col-sm-2 control-label">说&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp明</label>
+                <div class="col-sm-8" id="editor"></div>
+            </div>
+            <div class="form-group formbox">
+                <label for="link" class="col-sm-2 control-label"><span style="color: red">*</span>跳转链接</label>
+                <div class="col-sm-8">
+                    <input type="url" name="link" class="form-control" ng-model="link" value="{{link}}" id="link" required>
+                    <span style="color: red" ng-show="myForm.link.$dirty && myForm.link.$invalid">
+                        <span ng-show="myForm.link.$error.required || myForm.link.$error.url">请填写链接</span>
+                    </span>
+                </div>
+            </div>
+            <img-upload></img-upload>
+            <div class="form-group formbox">
+                <button type="submit" class="btn-up btn btn-success" ng-click="online()" ng-disabled="
+                myForm.$invalid || src == undefined" disabled="disabled">
+                    立即上线
+                </button>
+                <button type="submit" class="btn-sv btn btn-success" ng-click="outline()" ng-disabled="
+                myForm.$invalid || src == undefined" disabled="disabled">
+                    存为草稿
+                </button>
+                <button type="button" class="btn-cc btn btn-danger" ng-click="cancel()">取消</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+/* line 9, ../scss/common.scss */
+.pgbox {
+  display: flex;
+  align-items: center;
+}
+
+/* line 25, ../scss/common.scss */
+.pgbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 9, ../scss/prenext.scss */
+.pgbox .pg-num {
+  width: .4rem;
+  border: solid 1px grey;
+  text-align: center;
+}
+/* line 16, ../scss/prenext.scss */
+.pgbox .pg-go {
+  width: .4rem;
+  border: solid 1px grey;
+  text-align: center;
+}
+/* line 23, ../scss/prenext.scss */
+.pgbox .pgbtn {
+  margin-left: .2rem;
+}

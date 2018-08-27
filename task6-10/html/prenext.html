@@ -1,0 +1,30 @@
+<div class="pgbox">
+    <div>每页显示
+        <input class="pg-num" type="text" ng-model="pgnum"
+               onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+               onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+        > 条
+    </div>
+    <div>
+        <ul uib-pagination
+            total-items="totalItems"
+            ng-model="currentPage"
+            ng-change="page()"
+            max-size="5"
+            items-per-page="size"
+            first-text="<<"
+            previous-text="<"
+            next-text=">"
+            last-text=">>"
+            boundary-links="true"
+            boundary-link-numbers="true">
+        </ul>
+    </div>
+    <div>第
+        <input class="pg-go" type="text" ng-model="pggo"
+               onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+               onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+        > 页
+        <button class="pgbtn btn btn-danger" ng-click="pgbtn()" type="button">确定</button>
+    </div>
+</div>

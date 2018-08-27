@@ -1,0 +1,58 @@
+<div>
+    <div class="form-group formbox choiceBox">
+        <label for="choice" class="btn btn-success choice">选择文件</label>
+        <input
+                style="display:none"
+                type="file"
+                id="choice"
+                accept="image/*"
+                onchange="angular.element(this).scope().fileChanged(this)"
+        >
+        <span style="color: red" ng-show="tipshow">
+                   请上传图片
+                </span>
+        <div class="preview">图片预览</div>
+    </div>
+    <div class="form-group formbox">
+        <img  ng-src="{{src}}" id="img" class="img" ng-show="imgShow">
+    </div>
+    <div class="form-group formbox" ng-show="imgState">
+        <table class="table imgload">
+            <thead>
+            <tr>
+                <th>图片名</th>
+                <th>大小</th>
+                <th>进度</th>
+                <th>操作</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-if="fileName">
+                <td>{{fileName}}</td>
+                <td>{{fileSize | number:2}}MB</td>
+                <td>
+                    <div class="progress">
+                        <div style="width:{{progress+'%'}};" class="progress-bar"></div>
+                    </div>
+                </td>
+                <td>
+                        <span ng-show="uploadStatus">
+                            <i class="glyphicon glyphicon-ok"></i>
+                        </span>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success btn-xs" ng-click="uploadArt()" ng-disabled="src != undefined">
+                        <span class="glyphicon glyphicon-upload"></span>
+                        上传
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs" ng-click="delete()">
+                        <span class="glyphicon glyphicon-trash"></span>
+                        删除
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
